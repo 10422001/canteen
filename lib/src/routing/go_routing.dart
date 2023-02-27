@@ -12,15 +12,18 @@ GoRouter get routerGoRouting=> _router;
 final GoRouter _router = GoRouter(
   routes: <RouteBase>[
     GoRoute(
-      path: '/',
+      // path: '/',
+      path: FoodItemListView.routeName,
       builder: (BuildContext context, GoRouterState state) {
         return const FoodItemListView();
       },
       routes: <RouteBase>[
         GoRoute(
+          // path: 'details',
           path: 'details',
           builder: (BuildContext context, GoRouterState state) {
             return const FoodItemDetailsView();
+            // return const FoodItemDetailsView();
           },
         ),
       ],

@@ -6,7 +6,6 @@ import 'food_item_details.dart';
 import 'sample_item_details_view.dart';
 import 'package:go_router/go_router.dart';
 
-
 class FoodItemListView extends StatelessWidget {
   const FoodItemListView({
     super.key,
@@ -38,20 +37,20 @@ class FoodItemListView extends StatelessWidget {
           final item = items[index];
 
           return ListTile(
-              title: Text('${item.nameOfDish} : ${item.price} VND'),
-              leading:  CircleAvatar(
-                // foregroundImage: AssetImage('assets/images/flutter_logo.png'),
-                foregroundImage: AssetImage(item.pathToImageLinkOrAsset),
-              ),
-
-              onTap: () => context.go('/details');
-              // {
-              //   Navigator.restorablePushNamed(
-              //     context,
-              //     FoodItemDetailsView.routeName,
-              //     // FoodItemListView.routeName,
-              //   );
-              // });
+            title: Text('${item.nameOfDish} : ${item.price} VND'),
+            leading: CircleAvatar(
+              // foregroundImage: AssetImage('assets/images/flutter_logo.png'),
+              foregroundImage: AssetImage(item.pathToImageLinkOrAsset),
+            ),
+            onTap: () => context.go('/details'),
+          );
+          // {
+          //   Navigator.restorablePushNamed(
+          //     context,
+          //     FoodItemDetailsView.routeName,
+          //     // FoodItemListView.routeName,
+          //   );
+          // });
         },
       ),
     );
